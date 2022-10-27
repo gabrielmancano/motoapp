@@ -49,7 +49,7 @@ export const DescriptionText = styled.Text`
 export const Specifications = styled.View`
     width: 100%;
 
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 `;
 
 

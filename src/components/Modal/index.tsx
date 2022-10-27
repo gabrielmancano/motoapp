@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StatusBar, View } from 'react-native';
+import { Alert, StatusBar, View } from 'react-native';
 import { useTheme } from 'styled-components';
 
 import { MaterialIcons } from '@expo/vector-icons';
@@ -44,6 +44,15 @@ export function Modal({ isModalActive, closeModal }: Props) {
 
 
     const filter = () => {
+        if (
+            !cilindradas && filterOption === 'cilindrada' ||
+            !fabricante && filterOption === 'fabricante' ||
+            !categoria && filterOption === 'categoria'
+        ) {
+            Alert.alert("ERRO", "SELECIONE UMA OPÇÃO")
+            return;
+        }
+
         navigation.navigate('FilteredList', {
             filterOption: filterOption,
             cilindradas: cilindradas,
