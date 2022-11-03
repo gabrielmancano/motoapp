@@ -1,5 +1,3 @@
-import { ImageSourcePropType } from "react-native";
-
 export interface DataProps {
     id: number;
     nome: string;
@@ -74,7 +72,7 @@ export const data: DataProps[] = [
     },
     {
         id: 7,
-        nome: 'GSX',
+        nome: 'GSX 750',
         marca: 'Suzuki',
         cilindrada: 'alta',
         cc: 750,
